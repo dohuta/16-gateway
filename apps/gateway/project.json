@@ -29,7 +29,8 @@
     "serve": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "gateway:build"
+        "buildTarget": "gateway:build",
+        "port": 9230
       }
     },
     "lint": {

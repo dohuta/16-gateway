@@ -31,7 +31,7 @@ export class AxiosBase {
     return axios(options).then((response) => response.data);
   }
 
-  async post<T>(data, url): Promise<BaseResponse<T>> {
+  async post<T>(url, data): Promise<BaseResponse<T>> {
     if (url.startsWith('/')) url = url.substr(1);
     var options = {
       method: 'POST',

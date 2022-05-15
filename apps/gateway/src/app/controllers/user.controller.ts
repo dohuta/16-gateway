@@ -78,7 +78,7 @@ export class UsersController {
     );
 
     const createUserResponse: BaseResponse<SignUpResponse> =
-      await this.userService.post<SignUpResponse>('/signIn', userRequest);
+      await this.userService.post<SignUpResponse>('/users/signup', userRequest);
 
     if (createUserResponse.status !== HttpStatus.CREATED) {
       return {
